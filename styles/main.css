@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap");
+
+:root {
+    --color1: rgb(52, 209, 149);
+    --color2: black;
+    --color3: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+.container {
+    background-color: rgb(34, 37, 49);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculadora {
+    background-color: var(--color1);
+    width: 220px;
+    /* height: 350px; */
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 14px rgba(0, 0, 0, 0.418);
+}
+
+.operacion:hover {
+    cursor: text;
+}
+
+.pantalla {
+    /* background-color: var(--color2); */
+    background-color: rgb(122, 240, 200);
+    color: var(--color3);
+    border-radius: 5px;
+    height: 25%;
+    padding: 15px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+/* #pantalla {
+    letter-spacing: -5px;
+} */
+
+.teclas {
+    border: 1px solid var(--color3);
+    border-radius: 6px;
+    background-color: var(--color3);
+}
+
+.tecla:hover {
+    cursor: pointer;
+}
+
+.tecla:active {
+    background-color: rgb(255, 255, 255) !important;
+    color: green;
+}
+
+.tecla {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#pantalla,
+.tecla span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div .tecla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.numero {
+    background-color: rgb(24, 189, 175);
+    border: 1px solid var(--color3);
+    transition: 0.2s;
+}
+
+.numero:hover {
+    background-color: rgb(12, 170, 157);
+}
+
+.caracter {
+    background-color: rgb(45, 238, 174);
+    border: 1px solid var(--color3);
+    color: var(--color3);
+    transition: 0.2s;
+}
+
+.caracter:hover {
+    background-color: rgb(26, 228, 160);
+}
+
+.igual {
+    background-color: rgb(9, 107, 96);
+    border: 1px solid var(--color3);
+    border-bottom-right-radius: 5px;
+    color: var(--color3);
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: background-color 0.3s;
+}
+
+.igual:hover {
+    /* background-color: rgb(77, 199, 185); */
+    /* color: rgb(9, 107, 96); */
+    background-color: rgb(6, 75, 67);
+}
+
+#titulo__calculadora h1 {
+    color: var(--color1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.fila {
+    display: flex;
+    height: 20%;
+}
+
+.columna {
+    display: flex;
+    width: 100%;
+}
+
+.border-bs {
+    border-bottom-left-radius: 5px;
+}
+
+.border-te {
+    border-top-right-radius: 5px;
+}
+
+.border-ts {
+    border-top-left-radius: 5px;
+}
+
+.pantalla_on {
+    background-color: var(--color3);
+}
+
+@media only screen and (max-width: 600px) {
+    #titulo h1 {
+        font-size: 2.5rem;
+        margin-left: 50px;
+        width: 80%;
+    }
+
+    .calculadora {
+        width: 80%;
+        height: 70%;
+        padding: 1rem 0.7rem;
+    }
+
+    .pantalla {
+        height: 25%;
+    }
+
+    .teclas {
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #titulo h1 {
+        font-size: 3rem;
+    }
+
+    .calculadora {
+        min-width: 230px;
+        height: 380px;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .pantalla {
+        height: 25%;
+    }
+
+    .teclas {
+        height: 100%;
+    }
+
+    .numero {
+        font-size: 2rem;
+    }
+
+    .fila {
+        height: 20%;
+    }
+}
